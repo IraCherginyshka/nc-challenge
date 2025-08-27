@@ -1,0 +1,35 @@
+@import './assets/styles/variables';
+@import url('https://fonts.cdnfonts.com/css/open-sauce-one');
+
+html {
+  font-size: 16px;
+  background-color: $background-color;
+  touch-action: manipulation;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: $max-width;
+  margin: $center;
+  padding-left: $horizontal-indent;
+  padding-right: $horizontal-indent;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+//todo check if only landscape check
+@media (orientation: landscape) {
+  .landscape-display-none {
+    display: none;
+  }
+}
