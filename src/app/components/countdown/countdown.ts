@@ -86,10 +86,7 @@ export class Countdown implements OnInit, OnDestroy {
     const data = localStorage.getItem(LocalStorage.COUNTDOWN_DATA)
     if (data) {
       const parsedData = JSON.parse(data)
-
-      if (parsedData.name) {
-        this.eventName = parsedData.name
-      }
+      this.eventName = parsedData.name
       this.eventDate = parsedData.date
     }
   }

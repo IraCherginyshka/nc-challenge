@@ -43,3 +43,12 @@ To make it easy to test the loading of the quote, I added a 3s delay for quote l
 ```
 .pipe(delay(3000))
 ```
+
+
+## Suggestions
+- Update Sass usage since @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+- Use BreakpointObserver from @angular/cdk/layout to observe current orientation to programmatically hide components whet it is needed. Avoid fetching the Quote API when the component is not visible.
+- Sort imports for consistency.
+- Improve file naming by using file types.
+- Explore Angular Material more deeply — I didn’t have enough time to investigate and use all its benefits.
+- Fix the ResizeObserver console error.
