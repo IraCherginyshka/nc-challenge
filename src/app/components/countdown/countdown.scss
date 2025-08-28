@@ -1,0 +1,52 @@
+@import '../../../assets/styles/variables';
+
+.countdown {
+  &_container {
+    max-width: $max-width;
+    margin: $center;
+    padding-left: $horizontal-indent;
+    padding-right: $horizontal-indent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+  }
+
+  &_text-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+
+  &_event-name {
+    color: $primary-color;
+    margin: $vertical-gap;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  &_event-date {
+    margin: $vertical-gap;
+    white-space: nowrap;
+    min-height: 10vh;
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: $vertical-gap;
+
+    @media (orientation: landscape) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 80%;
+    }
+
+    &-input-container {
+      width: $input-width;
+      margin: $vertical-gap;
+    }
+  }
+}

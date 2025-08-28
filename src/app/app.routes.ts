@@ -1,3 +1,5 @@
-import { Routes } from '@angular/router';
+import { Routes } from '@angular/router'
 
-export const routes: Routes = [];
+import { Countdown } from './components/countdown/countdown'
+
+export const routes: Routes = [{ path: '', component: Countdown }]

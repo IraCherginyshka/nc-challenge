@@ -1,0 +1,7 @@
+<div class="quote-container">
+  @if (quote$ | async; as quote) {
+  <p>{{ quote.quote }}</p>
+  } @else {
+  <mat-spinner diameter="30" class="spinner" />
+  }
+</div>
