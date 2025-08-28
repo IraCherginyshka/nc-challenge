@@ -1,16 +1,30 @@
+@use '@angular/material' as mat;
 @import './assets/styles/variables';
 @import url('https://fonts.cdnfonts.com/css/open-sauce-one');
 
 html {
-  font-size: 16px;
   background-color: $background-color;
   touch-action: manipulation;
+  margin: 0;
+
+  @include mat.theme(
+    (
+      density: 0,
+    )
+  );
 }
 
-* {
+body {
+  color-scheme: light;
+  background-color: #f5f3f3;
+  color: #000000;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: 'Open Sauce One', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 .container {
@@ -26,8 +40,14 @@ html {
   align-items: center;
 }
 
+:root {
+  @include mat.progress-spinner-overrides(
+    (
+      active-indicator-color: $primary-color,
+    )
+  );
+}
 
-//todo check if only landscape check
 @media (orientation: landscape) {
   .landscape-display-none {
     display: none;

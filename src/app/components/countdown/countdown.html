@@ -1,0 +1,39 @@
+<div class="countdown_container">
+  <div class="countdown_text-wrapper">
+    <h2 class="countdown_event-name" atgResize>
+      {{ eventName ? `Time to ${eventName}` : 'Set Event Name' }}
+    </h2>
+  </div>
+
+  <div class="countdown_text-wrapper">
+    <p class="countdown_event-date" atgResize>{{ countdown() }}</p>
+  </div>
+
+  <app-quote class="landscape-display-none"></app-quote>
+
+  <form class="countdown_form">
+    <mat-form-field appearance="outline" class="countdown_form-input-container">
+      <mat-label>Title</mat-label>
+      <input
+        id="eventName"
+        matInput
+        placeholder="Event Name"
+        [ngModelOptions]="{standalone: true}"
+        [(ngModel)]="eventName"
+        (ngModelChange)="updateEventName($event)"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="countdown_form-input-container">
+      <mat-label>Date</mat-label>
+      <input
+        id="eventDate"
+        matInput
+        type="date"
+        [ngModelOptions]="{standalone: true}"
+        [(ngModel)]="eventDate"
+        (ngModelChange)="updateEventDate($event)"
+      />
+    </mat-form-field>
+  </form>
+</div>
