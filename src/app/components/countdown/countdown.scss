@@ -47,6 +47,10 @@
     &-input-container {
       width: $input-width;
       margin: $vertical-gap;
+
+      @media (orientation: landscape ) and (width < 700px){
+        width: $input-width-small;
+      }
     }
   }
 }
